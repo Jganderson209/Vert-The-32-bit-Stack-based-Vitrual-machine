@@ -32,8 +32,7 @@
             }
             
             if(isMainLoop){
-                eep = err("Please enter an Opcode(1.PUSH, 2.ADD, 3.PRINT,0.HALT)",0,3);
-                if(eep == 1){
+                eep = errAuto("Please enter an Opcode(1.PUSH, 2.ADD, 3.PRINT, 4. SUBTRACT, 5. MULTIPLY, 6. DIVIDE, 0.HALT)",0,6);                if(eep == 1){
                     eep = err("Please enter a number to PUSH",1,50);
                     Memory.push_back(1);
                 }
@@ -53,7 +52,7 @@
             }
             
             if(isMainLoop){
-                eep = errAuto("Please enter an Opcode(1.PUSH, 2.ADD, 3.PRINT,0.HALT)",0,3);
+                eep = errAuto("Please enter an Opcode(1.PUSH, 2.ADD, 3.PRINT, 4. SUBTRACT, 5. MULTIPLY, 6. DIVIDE, 0.HALT)",0,6);
                 if(eep == 1){
                     eep = errAuto("Please enter a number to PUSH",1,50);
                     Memory.push_back(1);
