@@ -6,7 +6,7 @@ A 32-bit stack-based virtual machine written in C++ from scratch. Vert loads a p
 
 ## What is a Stack-Based VM?
 
-A virtual machine that performs all operations by pushing values onto a stack and popping them off to compute results — no named registers involved. It's one of the two core VM designs, and the same model used by the JVM and CPython under the hood.
+A virtual machine that performs all operations by pushing values onto a stack and popping them off to compute results — no named registers involved. It's one of the two core VM designs, and the same model used by the JVM and CPython.
 
 ---
 
