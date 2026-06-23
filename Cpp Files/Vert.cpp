@@ -3,26 +3,33 @@
     Vert::Vert() : ScanLee(std::cin), led(std::random_device{}()){}
     void Vert::select(){
         int eep = err("Manual (1.) or Random (2.)",1,2);
-        if(eep == 1) Memory = getManualMemory();
-        else Memory = getRandomMemory();
+        if(eep == 1) getManualMemory();
+        else getRandomMemory();
         run();
     }
-    std::vector<int> Vert::getManualMemory(){
+    void Vert::getManualMemory(){
         int eep = 112212121212;
+        bool isMainLoop = false;
         while(eep > 0){
             if (Memory.size() < 1){
                 Memory.push_back(1);
-                eep = err("Please pick a number, this is the # " + std::to_string(Memory.size()) + " number in the memory (the first was 1)" ,1,1);
+                eep = err("Opicode PUSH(1) has been initialy placed into Memory\nPlease enter any number" ,1,50);
+                isMainLoop = true;
                 Memory.push_back(eep);
             }
-            // please complete this today 
-
+            
+            if(isMainLoop){
+                eep = err("Please enter an Opcode(1.PUSH, 2.ADD, 3.PRINT,0.HALT)",0,3);
                 
-            
-            
+                if(eep == 1){
+                    eep = err("Please enter a number to PUSH",1,50);
+                    Memory.push_back(1);
+                }
+                Memory.push_back(eep);
+            }
         }
     }
-    std::vector<int> Vert::getRandomMemory(){
+    void Vert::getRandomMemory(){
 
     }
     void Vert::run(){

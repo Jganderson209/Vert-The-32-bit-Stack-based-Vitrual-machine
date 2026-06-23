@@ -15,8 +15,8 @@ class Vert{
     public:
         void run();
         void select();
-        std::vector<int> getManualMemory();
-        std::vector<int> getRandomMemory();
+        void getManualMemory();
+        void getRandomMemory();
         void Execute(int &index);
         int err(std::string prompt, int min, int max);
         Vert();
