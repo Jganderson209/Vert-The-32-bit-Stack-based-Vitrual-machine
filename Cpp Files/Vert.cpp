@@ -100,7 +100,7 @@
                     Stack.pop_back();//deletes recently added number
                     int secondNum = Stack.back();
                     Stack.pop_back();
-                    Stack.push_back(firstNum - secondNum);//subtracts the sum of the two removed numbers 
+                    Stack.push_back( secondNum- firstNum);//subtracts the sum of the two removed numbers 
                 }
                 break;
             case Opcode::DIV:
@@ -110,7 +110,7 @@
                     Stack.pop_back();//deletes recently added number
                     int secondNum = Stack.back();
                     Stack.pop_back();
-                    Stack.push_back(firstNum / secondNum);//Divides the sum of the two removed numbers 
+                    Stack.push_back(secondNum / firstNum);//Divides the sum of the two removed numbers 
                 }
                 break;
             case Opcode::MULTIPLY:
