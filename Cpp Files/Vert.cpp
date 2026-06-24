@@ -6,11 +6,6 @@
             - use a sleep_for() after each thing the vm does, so the user can activly see everything happening
             - make two different runs, one that immediatly does the calculations, and one that uses the sleep_for()
     */ 
-
-    /*
-            DEV DISCLAIMER!!!
-        - I suck at explaining things, so apologies if some comments overexplain or underexplain ;)
-    */
 #include "Vert.h"
 #include "Opcode.h"
     Vert::Vert() : ScanLee(std::cin), led(std::random_device{}())/*No args constructor*/{}
